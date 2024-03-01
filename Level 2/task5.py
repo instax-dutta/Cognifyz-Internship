@@ -1,21 +1,27 @@
-#task5 file manipulation 
+import re
+from collections import Counter
 import os
-def count_word_occurrences(file_path):
-    word_counts = {}
 
+def count_word_occurrences(file_name):
+    # fetch the file path 
+    file_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), file_name)
+
+    # Read the content of the file
     with open(file_path, 'r') as file:
-        for line in file:
-            words = line.lower().split()
-            for word in words:
-                if word in word_counts:
-                    word_counts[word] += 1
-                else:
-                    word_counts[word] = 1
+        content = file.read()
 
-    sorted_items = sorted(word_counts.items())
+    # Remove  non alphabetical characters and convert to lowercase
+    words = re.findall(r'\b\w+\b', content.lower())
 
-    for word, count in sorted_items:
-        print(f"{word}: {count}")
+    # Count occurrences 
+    word_counts = Counter(words)
 
-file_path = 'words.txt'  
-count_word_occurrences(file_path)
+    # Display results in alphabetical order
+    sorted_word_counts = sorted(word_counts.items())
+
+    # Print the results
+    for word, count in sorted_word_counts:
+        print(f'{word}: {count}')
+
+# Use the function with the file name directly
+count_word_occurrences('words.txt')
