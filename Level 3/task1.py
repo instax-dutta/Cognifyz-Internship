@@ -1,3 +1,4 @@
+#task1 level 3 a simple webscraper which scrapes the about us page of a website and saves the information to a file
 import requests
 from bs4 import BeautifulSoup
 

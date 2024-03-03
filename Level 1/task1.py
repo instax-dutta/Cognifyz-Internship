@@ -1,4 +1,4 @@
-#create a python function which takes a string as input and returns the reverse of it
+#level 1 task 1 a string reverser
 def reverse_string(input_string):
     return input_string[::-1]
 input_string = input("Enter a string: ")

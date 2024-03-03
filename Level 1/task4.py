@@ -1,4 +1,4 @@
-#task4 calculator
+#level 1 task 4 a simple calculator
 def calculator():
     num1 = float(input("Enter first number: "))
     operator = input("Enter operator (+, -, *, /, %): ")

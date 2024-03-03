@@ -1,4 +1,4 @@
-#task4 fibonacci series
+#level2 task4 a fibonacci sequence generator
 def fibonacci(n):
   if n <= 1:
     return [n]

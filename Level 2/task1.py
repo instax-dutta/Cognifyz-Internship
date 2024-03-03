@@ -1,4 +1,4 @@
-#task1 number guesing game 
+#level2 task1 a simple number guessing game
 import random
 
 def guessing_game():
