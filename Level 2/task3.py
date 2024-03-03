@@ -1,3 +1,4 @@
+#level 2 task3 simple password strength checker
 def password_strength(password):
   length_score = 0
   uppercase_score = 0
