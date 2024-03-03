@@ -1,4 +1,3 @@
-#level 2 task 3 a simple password strength checker
 def password_strength(password):
   length_score = 0
   uppercase_score = 0
@@ -33,3 +32,11 @@ def password_strength(password):
     return "Medium"
   else:
     return "Strong"
+
+while True:
+    password = input("Enter a password: ")
+    strength = password_strength(password)
+    print("Password strength:", strength)
+    another_check = input("Do you want to check another password? (yes/no): ")
+    if another_check.lower() != 'yes':
+        break 
